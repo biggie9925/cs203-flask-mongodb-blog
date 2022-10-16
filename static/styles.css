@@ -15,6 +15,7 @@
     display:flex;
     align-items:center;
     z-index: 999;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .topLeft,
@@ -55,16 +56,22 @@
     font-size:18px;
     font-weight:300px;
     color:#444;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.topSearch,.topUser{
+.topSearch{
     font-size:18px;
     color:#666;
     cursor: pointer;
     margin:0 10px;
 }
 
+.topSearchBar{
+    border-radius:20px;
+    padding-left:10px;
+    height:30px;
+}
 
 
 
@@ -142,9 +149,12 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .blog-text a{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
     color:rgb(235, 98, 162);
     text-decoration: none;
     font-size:1.5rem;
@@ -181,6 +191,7 @@
     display:flex;
     align-items: center;
     justify-content: space-evenly;
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-about{
@@ -240,6 +251,7 @@
     margin-top:10px;
     margin-bottom:20px;
     padding-left: 10px;
+    padding-top:10px;
     outline:none;
     border-radius:10px;
     border:1px solid #777;
@@ -248,20 +260,19 @@
 
 
 .footer-email button{
-    font-family:'Silkscreen',cursive;
-    font-size:15px;
     outline:none;
     border:none;
     border-radius:10px;
+    width:100px;
     height:40px;
     padding:10px;
     background-color:rgb(239, 179, 207);
     cursor:pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-email button:hover{
-    background-color:#AAAAAA;
-    color:white;
+    background-color:#F3DFE2;
 }
 
 
@@ -272,30 +283,36 @@
 
 
 /* INDIVIDUAL POST STYLE */
+.singlePost{
+    margin:auto;
+    width:80%;
+}
 
 .singlePostWrapper {
     padding: 20px;
     margin-left: 50px;
     margin-right: 50px;
+    font-family: 'Poppins', sans-serif;
+    
 }
 
 .singlePostImg {
     width: 100%;
-    height: 300px;
     border-radius: 5px;
     object-fit: cover;
 }
 
 .singlePostTitle {
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     margin: 10px;
-    font-family: 'Lora', serif;
+    margin-top:30px;
     font-size: 28px;
 }
 
 .singlePostEdit {
     float: right;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .singlePostIcon {
@@ -345,11 +362,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.3)), url("./images/login-bg.jpg");
-    /* background: url("./images/bg.jpg"); */
+    background-image:linear-gradient(#f4d5db,#ade2e6);
     background-size: cover;
     margin-left: -8px;
     margin-right: -8px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .loginTitle {
@@ -366,7 +383,7 @@
 
 .loginForm > label {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -374,34 +391,23 @@
 }
 
 .loginInput {
+    width:200px;
     padding: 10px;
     background-color: white;
     border: none;
+    border-radius:10px;
 }
 
 .loginButton {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 15px;
     cursor: pointer;
-    /* background-color: lightcoral; */
-    background-color: rgb(235, 98, 162);
-    border: none;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.loginRegisterButton {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    font-size: 15px;
     background-color: teal;
-    cursor: pointer;
     border: none;
-    padding: 10px;
     color: white;
     border-radius: 10px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -417,10 +423,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.3)), url("./images/register-bg.jpg");
+    background-image:linear-gradient(#ade2e6,#f4d5db);
     background-size: cover;
     margin-left: -8px;
     margin-right: -8px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .registerTitle {
@@ -438,38 +445,94 @@
 .registerForm > label {
     margin-top: 20px;
     padding-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
 }
 
 .registerInput {
+    width:200px;
     padding: 10px;
     background-color: white;
     border: none;
+    border-radius:10px;
 }
 
 .registerButton {
-    margin-top: 20px;
+    margin-top: 30px;
     cursor: pointer;
-    /* background-color: lightcoral; */
     background-color: rgb(235, 98, 162);
     border: none;
     color: white;
     border-radius: 10px;
     padding: 10px;
     font-size: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.registerLoginButton {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    font-size: 15px;
-    background-color: teal;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    color: white;
+
+/* WRITE PAGE STYLE */
+
+.write{
+    padding-top:50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.writeForm{
+    display:flex;
+    flex-direction: column;
+}
+
+.writeFormGroup{
+    margin:auto;
+    display:flex;
+    align-items: center;
+
+}
+.writeFormGroup label{
+    margin:10px;
+    padding:20px;
+    cursor:pointer;
+}
+
+.writeIcon{
+    margin-right:10px;
+    font-size:20px;
+}
+
+.writeInput{
+    font-family: 'Poppins', sans-serif;
+    font-size:30px;
+    border:none;
+    padding:15px;
+    width:70vw;
     border-radius: 10px;
+    background-color: #f2f2f2;
+}
+
+.writeInput:focus{
+    outline:none;
+}
+
+.writeText{
+    font-size: 20px;
+    height:300px;
+    resize:none;
+    margin-top:20px;
+}
+
+.writeButton{
+    text-align: center;
+}
+
+.writeSubmit{
+    font-family: 'Poppins', sans-serif;
+    width:100px;
+    color:white;
+    background-color: teal;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
 }
