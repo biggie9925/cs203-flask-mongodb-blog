@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block content %} 
+
+<div>
+    <div class="header">
+        <span class="header-title">Blog</span>
+        <img class="header-image" src="https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000">
+    </div>
+
+    <div class="blog-container">
+        <!-- card1 -->
+        <div class="card">
+            <div class="blog-image">
+                <img src="https://i.shgcdn.com/148dc4ae-078b-4962-a7ba-70b75be8df4e/-/format/auto/-/preview/3000x3000/-/quality/lighter/">
+            </div>
+
+            <div class="blog-text">
+                <a href="single">Golden Retriever</a>
+                <span>13 October 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis quam, optio odio illum perspiciatis quae tempore, doloremque quaerat corporis aspernatur quidem suscipit mollitia quibusdam veritatis voluptatum ex. Corporis, consequatur.
+                </p>
+            </div>       
+        </div>
+
+        <!-- card2 -->
+        <div class="card">
+            <div class="blog-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzGh_0C1oMMbSiSJi3uIPKzOcp8Ycq2AwQg&usqp=CAU">
+            </div>
+
+            <div class="blog-text">
+                <a href="#">Travel</a>
+                <span>5 July 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis quam, optio odio illum perspiciatis quae tempore, doloremque quaerat corporis aspernatur quidem suscipit mollitia quibusdam veritatis voluptatum ex. Corporis, consequatur.
+                </p>
+            </div>       
+        </div>
+
+        <!-- card3 -->
+        <div class="card">
+            <div class="blog-image">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/8c/17/7a/fb-img-1543465867896.jpg">
+            </div>
+
+            <div class="blog-text">
+                <a href="#">Cafe in Auckland</a>
+                <span>25 April 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis quam, optio odio illum perspiciatis quae tempore, doloremque quaerat corporis aspernatur quidem suscipit mollitia quibusdam veritatis voluptatum ex. Corporis, consequatur.
+                </p>
+            </div>       
+        </div>
+
+        <!-- card4 -->
+        <div class="card">
+            <div class="blog-image">
+                <img src="https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2020/07/19/1802/Park-Hyatt-Auckland-P004-View.jpg/Park-Hyatt-Auckland-P004-View.16x9.jpg?imwidth=1920">
+            </div>
+
+            <div class="blog-text">
+                <a href="#">Auckland City</a>
+                <span>5 March 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis quam, optio odio illum perspiciatis quae tempore, doloremque quaerat corporis aspernatur quidem suscipit mollitia quibusdam veritatis voluptatum ex. Corporis, consequatur.
+                </p>
+            </div>       
+        </div>
+
+
+        <!-- card5 -->
+        <div class="card">
+            <div class="blog-image">
+                <img src="https://post.healthline.com/wp-content/uploads/2020/08/edible-flowers-732x549-thumbnail-732x549.jpg">
+            </div>
+
+            <div class="blog-text">
+                <a href="#">Flowers</a>
+                <span>2 January 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis quam, optio odio illum perspiciatis quae tempore, doloremque quaerat corporis aspernatur quidem suscipit mollitia quibusdam veritatis voluptatum ex. Corporis, consequatur.
+                </p>
+            </div>       
+        </div>
+
+        <!-- card6 -->
+        <div class="card">
+            <div class="blog-image">
+                <img src="https://hips.hearstapps.com/vidthumb/images/gettyimages-1072608926.jpg">
+            </div>
+
+            <div class="blog-text">
+                <a href="#">Merry Christmas</a>
+                <span>25 December 2021</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis quam, optio odio illum perspiciatis quae tempore, doloremque quaerat corporis aspernatur quidem suscipit mollitia quibusdam veritatis voluptatum ex. Corporis, consequatur.
+                </p>
+            </div>       
+        </div>
+        <!-- footer -->
+
+    </div>
+
+    <div class="footer">
+        <div class="footer-about">
+            <span class="about-title">About Us</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laboriosam illo quae veniam aspernatur aperiam iste, impedit asperiores corrupti amet, voluptatem cupiditate rerum officiis magnam quos modi? Officia, et doloremque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas iure nulla sint iusto unde corporis facere quod, expedita placeat adipisci iste reprehenderit ea vel delectus. Atque, molestiae excepturi? Delectus, facilis.</p>
+            <div class="footer-icons">
+                <i class="topIcon fa-solid fa-envelope"></i>
+                <i class="topIcon fa-brands fa-github"></i>
+                <i class="topIcon fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="footer-email">
+            <h2>Get in touch</h2>
+            <form action="/contact" method="POST">
+                <input class="input-field" type="text" id="name" name="name" placeholder="Enter your name">
+                <input class="input-field" type="email" id="email" name="email" placeholder="Enter your email">
+                <input class="input-field" type="text" id="phone" name="phone" placeholder="Enter your contact number">
+                <textarea id="message" class="textarea-field" name="message" placeholder="Enter your message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

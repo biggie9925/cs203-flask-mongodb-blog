@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} 
+Register
+{% endblock %}
+
+{% block content %} 
+
+    <div class="register">
+        <span class="registerTitle">Register</span>
+        <form class="registerForm" method="POST">
+          <label>Username:</label>
+          <input class="registerInput" name="username" type="text" placeholder="Enter your username..." />
+          <label>Email:</label>
+          <input class="registerInput" name="email" type="text" placeholder="Enter your email..." />
+          <label>Password:</label>
+          <input class="registerInput" name="password" type="password" placeholder="Enter your password..." />
+          <button class="registerButton" type="submit">Register</button>
+        </form>
+      </div>
+
+
+{% endblock %}
