@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %} 
+
+    <div class="write">
+        <span class="writeTitle">Write</span>
+        <br>
+       <form class="writeForm" method="POST">
+        <div class="writeFormGroup">
+            <input name="title" type="text" placeholder="Title" class="writeInput" autofocus>
+        </div>
+        <div class="writeFormGroup">
+            <textarea name="story" placeholder="Tell your story..." type="text" class="writeInput writeText"></textarea>
+        </div>
+        <div class="writeFormGroup">
+            <label for="fileInput">
+                <i class="writeIcon fa-solid fa-file-arrow-up"></i>
+                <span>Upload File</span>
+            </label>
+            <input type="file" id="fileInput" style="display:none">
+        </div>
+        <div class="writeButton">
+            <button class="writeSubmit" type="submit">Publish</button>
+        </div>
+       </form>
+    </div>
+    
+{% endblock %}
