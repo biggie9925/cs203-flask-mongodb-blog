@@ -1,4 +1,4 @@
-# cs203-blog
+# CS203-Flask-Blog
 
 David and Ellie's group project for CS203
 
