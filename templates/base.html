@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Poppins:wght@400;700&family=Silkscreen&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../static/styles.css" />
     <title>Home</title>
 </head>
@@ -23,19 +24,37 @@
             <ul class='topList'>
                 <a href="/home" class='topListItem'>HOME</a>
                 <a href="/write"class='topListItem'>WRITE</a>
+                {% if user.is_authenticated%}
+                <a href="/logout" class='topListItem'>LOGOUT</a>
+                {% else %}
                 <a href="/login" class='topListItem'>LOGIN</a>
                 <a href="/register" class='topListItem'>REGISTER</a>
-                <a href="/logout" class='topListItem'>LOGOUT</a>
+                {% endif %}
             </ul>
         </div>
         <div class="topRight">
-            <input class="topSearchBar" type="text" placeholder="Search...">
-            <i class="topSearch fa-solid fa-magnifying-glass"></i>
+        <form action="{{url_for('search')}}" method="post">
+                <input class="topSearchBar" type="text" name="search" placeholder="Search...">
+                <button type="submit" style="all:unset"><i class="topSearch fa-solid fa-magnifying-glass"></i></button>
+        </form>
         </div>
     </div>
 
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            {% if category == "error" %}
+            <div class="flash-message" style="color:red">{{ message }}</div>
+            {% else %}
+            <div class="flash-message">{{ message }}</div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
     <!-- content -->
-    {% block content %} {% endblock %}
+    {% block content %} 
+    {% endblock %}
 
 </body>
 </html>

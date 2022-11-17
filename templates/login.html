@@ -3,11 +3,11 @@
 
     <div class="login">
         <span class="loginTitle">Login</span>
-        <form class="loginForm">
+        <form method="POST" action="{{url_for('login')}}" class="loginForm">
             <label>Email:</label>
-            <input class="loginInput" type="text" placeholder="Enter your email..." />
+            <input class="loginInput" name="email" type="text" placeholder="Enter your email..." />
             <label>Password:</label>
-            <input class="loginInput" type="password" placeholder="Enter your password..." />
+            <input class="loginInput" name="password" type="password" placeholder="Enter your password..." />
             <button class="loginButton">Login</button>
         </form>
     </div>
