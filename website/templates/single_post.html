@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %} 
+
+    <div class="singlePost">
+        <div class="singlePostWrapper">
+            <img class="singlePostImg" src="{{post.imgURL}}" alt="d12" />
+            <h1 class="singlePostTitle">
+                {{post.title}}
+                <div class="singlePostEdit">
+                    <a class="button" href="/delete/{{post._id}}"><i class="singlePostIcon fa-regular fa-trash-can"></i></a>
+                </div>
+            </h1>
+        <div class="singlePostInfo">
+            <span class="singlePostAuthor">Author: <b>{{post.username[0]}}</b></span>
+            <span class="singlePostDate">{{post.created_date}}</span>
+        </div>
+        <p class="singlePostDesc">{{post.content}}</p>
+        </div>
+    </div>
+
+{% endblock %}

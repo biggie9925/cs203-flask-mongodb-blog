@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %} 
+
+<div>
+    <div class="header">
+        <span class="header-title">Welcome {{user.username}}</span>
+        <img class="header-image" src="https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000">
+    </div>
+    <div class="blog-container">
+        {% for post in posts %}
+        <div class="card">
+            <div class="blog-image">
+                <img src={{post.imgURL}}>
+            </div>
+
+            <div class="blog-text">
+                <a href="/posts/{{post._id}}">{{post.title}}</a>
+                <span>{{post.created_date}}</span>
+                <p>{{post.content}}</p>
+            </div>       
+        </div>
+        {% endfor %}
+
+        {% if message %}
+        <div class="blog-message">
+        {{ message }}
+        </div>
+        {% endif %}
+        
+
+        <!-- footer -->
+
+    </div>
+
+    <div class="footer">
+        <div class="footer-about">
+            <span class="about-title">About Us</span>
+            <p>David and Ellie's group project for CS203</p>
+            <br>
+            <p>This is a blog project using Flask framework inspired by Tech with Tim's flask-blog and Lama Dev's React-blog application</p>
+            <div class="footer-icons">
+                <!-- <i class="topIcon fa-solid fa-envelope"></i> -->
+                <i class="topIcon fa-brands fa-github"></i>
+                <i class="topIcon fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="footer-email">
+            <h2>Get in touch</h2>
+            <form action="{{url_for('views.index')}}" method="post">
+                <input class="input-field" type="text" id="name" name="name" placeholder="Enter your name">
+                <input class="input-field" type="email" id="email" name="email" placeholder="Enter your email">
+                <input class="input-field" type="text" id="phone" name="phone" placeholder="Enter your contact number">
+                <textarea id="message" name="message" class="textarea-field" placeholder="Enter your message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
