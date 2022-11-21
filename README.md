@@ -29,3 +29,5 @@ Python libraries used
 •	Certifi
 •	Bson-ObjectID
 •	Bcrypt
+
+In order for this application to run you either need your own MongoDB database or get in touch with David or Ellie
