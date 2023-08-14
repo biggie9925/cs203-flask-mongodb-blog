@@ -7,9 +7,10 @@ import certifi
 from .models import User
 from bson.objectid import ObjectId
 
+
 load_dotenv(find_dotenv())
 password = os.environ.get("MONGODB_PWD")
-connection_string = f"mongodb+srv://admin:{password}@database.lrh5cyk.mongodb.net/?retryWrites=true&w=majority"
+connection_string = "mongodb+srv://"
 client = MongoClient(connection_string, tlsCAFile=certifi.where())
 db = client.get_database('test')
 users = db.test

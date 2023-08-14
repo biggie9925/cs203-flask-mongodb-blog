@@ -31,3 +31,8 @@ Python libraries used
 •	Bcrypt
 
 In order for this application to run you either need your own MongoDB database or get in touch with David or Ellie - you need to update the connection_string in the __init__ file for the database connection
+
+Enjoy!
+
+![alt text](https://github.com/biggie9925/cs203-flask-mongodb-blog/blob/main/screenshots/1.jpg?raw=true)
+![alt text](https://github.com/biggie9925/cs203-flask-mongodb-blog/blob/main/screenshots/2.jpg?raw=true)
